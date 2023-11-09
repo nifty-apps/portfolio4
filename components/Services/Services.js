@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Carousel from 'react-slick';
@@ -11,31 +11,32 @@ import IconTextCard from '../Cards/IconText';
 import useStyle from './services-style';
 
 const services = [
+
   {
-    icon: 'ion-ios-color-wand',
-    name: 'UI Interface Design',
-    desc: 'Pellentesque ac  vel blandit nulla.'
-  },
-  {
-    icon: 'ion-logo-dribbble',
-    name: 'Icon Design',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: 'ion-ios-camera',
+    name: 'Photo Editing',
+    desc: 'Love to capturing moments.'
   },
   {
     icon: 'ion-ios-globe',
     name: 'HTML Prototyping',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    desc: 'Bringing ideas to life with HTML prototyping precision.'
   },
   {
-    icon: 'ion-ios-camera',
-    name: 'Photo Editing',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: 'ion-logo-dribbble',
+    name: 'Icon Design',
+    desc: 'Elevating user experiences through meticulously crafted icon design.'
   },
   {
     icon: 'ion-ios-snow',
     name: 'Graphic Illustrations',
-    desc: 'Pellentesque ac  vel blandit nulla.'
-  }
+    desc: 'Transforming concepts into vibrant stories through graphic illustrations.'
+  },
+  {
+    icon: 'ion-ios-color-wand',
+    name: 'UI Interface Design',
+    desc: 'Crafting seamless digital experiences with intuitive UI interface design.'
+  },
 ];
 
 function Services() {

@@ -16,67 +16,47 @@ import useStyle from './gallery-style';
 const portfolio = [
   {
     img: imgAPI.maskulino[6],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
+    title: 'LearnSelf24-learning website',
+    link: 'https://visionary-strudel-f22b39.netlify.app/',
+    size: 'long',
     category: 'cat1'
   },
   {
     img: imgAPI.maskulino[7],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    title: 'Movie~Flix',
+    link: 'https://movieflixpro.netlify.app/',
     size: 'long',
     category: 'cat2'
   },
   {
-    img: imgAPI.maskulino[8],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[5],
+    title: 'QUIZ CRACKERS',
+    link: 'https://quiz-app-crackers.netlify.app/',
     size: 'short',
-    category: 'cat3'
+    category: 'cat1'
   },
   {
     img: imgAPI.maskulino[9],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    title: 'Bike Club-Bike service station',
+    link: 'https://bike-club-49a1f.web.app/',
     size: 'long',
     category: 'cat1'
   },
   {
-    img: imgAPI.maskulino[10],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat2'
-  },
-  {
-    img: imgAPI.maskulino[11],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat3'
-  },
-  {
-    img: imgAPI.maskulino[12],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[4],
+    title: 'Shopping-Cart',
+    link: 'https://dreamy-begonia-b86fb7.netlify.app/',
     size: 'short',
     category: 'cat1'
   },
   {
-    img: imgAPI.maskulino[14],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat2'
-  },
-  {
-    img: imgAPI.maskulino[13],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[8],
+    title: 'SPACE-X',
+    link: 'https://lucky-jelly-fa082b.netlify.app/',
     size: 'long',
     category: 'cat2'
   },
+
 ];
 
 function Gallery() {
@@ -165,32 +145,32 @@ function Gallery() {
             onClick={() => filterChildren('cat1')}
             className={filter === 'cat1' ? classes.selected : ''}
           >
-            Category 1
+            Reactjs
           </Button>
           <Button
             onClick={() => filterChildren('cat2')}
             className={filter === 'cat2' ? classes.selected : ''}
           >
-            Category 2
+            Graphql
           </Button>
-          <Button
+          {/* <Button
             onClick={() => filterChildren('cat3')}
             className={filter === 'cat3' ? classes.selected : ''}
           >
             Category 3
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             onClick={() => filterChildren('cat4')}
             className={filter === 'cat4' ? classes.selected : ''}
           >
             Category 4
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             onClick={() => filterChildren('cat5')}
             className={filter === 'cat5' ? classes.selected : ''}
           >
             Category 5
-          </Button>
+          </Button> */}
         </div>
         {!isTablet ? (
           <Fragment>

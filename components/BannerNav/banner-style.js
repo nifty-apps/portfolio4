@@ -12,7 +12,7 @@ const bannerStyles = makeStyles({ uniqId: 'banner' })((theme, _params, classes) 
     },
     '& .MuiContainer-root': {
       padding: 0
-    }
+    },
   },
   cover: {
     position: 'absolute',
@@ -94,8 +94,9 @@ const bannerStyles = makeStyles({ uniqId: 'banner' })((theme, _params, classes) 
       color: theme.palette.primary.dark,
       width: 36,
       height: 36,
+      backgroundColor: 'white',
       '& i': {
-        color: alpha(theme.palette.common.white, 0.75),
+        // color: alpha(theme.palette.common.white, 0.75),
       }
     },
     '& i': {

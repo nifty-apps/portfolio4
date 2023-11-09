@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -69,13 +71,12 @@ function BannerNav(props) {
                 <Typography variant="h4" className={text.title2}>
                   <span>
                     {t('maskulino-landing.banner_greeting')}
-                    ,
                   </span>
                 </Typography>
                 <Typography variant="h2" className={text.title}>
                   <span>
                     {t('maskulino-landing.banner_me')}
-                    &nbsp;John,&nbsp;
+                    &nbsp;Bishal Arman,&nbsp;
                     {brand.maskulino.title}
                   </span>
                 </Typography>
@@ -87,19 +88,22 @@ function BannerNav(props) {
                       </span>
                     </Typography>
                     <div className={classes.socmed}>
-                      <Button variant="outlined" className={classes.download} component="a">Download CV</Button>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-facebook" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-twitter" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-instagram" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-linkedin" />
-                      </IconButton>
+                      <Button href="https://drive.google.com/file/d/1OdXDUB8racGL8mRcts3l6JuYRE8BCJ74/view?usp=drive_link" target="_blank" variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
+                      <Link href="https://www.facebook.com/bishal.arman.9/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-facebook" />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://www.linkedin.com/in/bishalarman/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-linkedin" />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://github.com/Bishal-Arman" target="_blank">
+                        <IconButton aria-label="Delete" className="k" size="small">
+                          <FaGithub size={23} />
+                        </IconButton>
+                      </Link>
                     </div>
                   </Fragment>
                 )}

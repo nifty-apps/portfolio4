@@ -2,13 +2,13 @@ import imgAPI from '~/public/images/imgAPI';
 
 const brand = {
   maskulino: {
-    name: 'John Doe',
-    title: 'Photographer',
+    name: 'Bishal Arman',
+    title: 'Full Stack Developer',
     desc: 'Iluxi Profile - React Single Landing Page Template',
     prefix: 'Iluxi',
     footerText: 'Iluxi Theme 2022',
     logoText: 'Iluxi Profile',
-    projectName: 'Profile',
+    projectName: 'Bishal Arman | Full Stack Developer',
     url: 'iluxireact.ux-maestro.com/profile',
     img: '/images/maskulino-logo.png',
     avatar: imgAPI.maskulino[0],

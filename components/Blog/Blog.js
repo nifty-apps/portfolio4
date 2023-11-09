@@ -3,7 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Carousel from 'react-slick';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
 import { useText } from '~/theme/common';
@@ -15,34 +15,24 @@ import imgApi from '~/public/images/imgAPI';
 const blogData = [
   {
     img: imgApi.photo[0],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[1],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[2],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
+    title: 'SitePoint',
+    desc: 'SitePoint is an exclusive hub for web developers.It produces articles about developement and Responsive Web Design which are clearly classified and easily searched.'
   },
   {
     img: imgApi.photo[3],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
+    title: 'Next14',
+    desc: 'Next14, a major independent specialised in integrated communication in marketing technologies.Passion, experience and transparency help us build long-lasting relationships with clients.'
   },
   {
-    img: imgApi.photo[4],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
+    img: imgApi.photo[2],
+    title: 'Simple Programmer',
+    desc: 'Simple Programmer is a web development blog. Not only does the website talk about professional knowledge,but it also helps web developerssee everything in the tech world from a slightly different angle.'
   },
   {
-    img: imgApi.photo[5],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
+    img: imgApi.photo[1],
+    title: 'CSS-Tricks',
+    desc: 'CSS-Tricks originally only talked about CSS and HTML as well. But when the author kicked off with JavaScript afterward,topics on JavaScript and JavaScript frameworks.'
+  }
 ];
 
 function Blog() {
@@ -98,7 +88,6 @@ function Blog() {
         <Typography gutterBottom className={text.paragraph}>
           {t('maskulino-landing.blog_desc')}
         </Typography>
-        <Button className={classes.link} color="secondary" href="#">luxi-theme.blog.com</Button>
       </div>
       <div className={classes.sliderWrap}>
         <div className={classes.carousel}>
