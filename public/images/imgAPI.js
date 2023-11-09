@@ -13,6 +13,8 @@ const imgAPI = {
     '/images/avatars/pp_boy5.svg'
   ],
   photo: [
+    '/images/blogs/1.jpg',
+    '/images/blogs/2.jpeg',
     'https://via.placeholder.com/675x900/e1ad92/ffffff',
     'https://via.placeholder.com/967x725/ea6d6d/ffffff',
     'https://via.placeholder.com/1280x849/ea6db7/ffffff',
@@ -29,7 +31,11 @@ const imgAPI = {
     'https://via.placeholder.com/640x425/c4cdff/757575',
   ],
   maskulino: [
-    'https://via.placeholder.com/271x352/0013a5/FFFFFF',
+    '/images/avatars/pp_main.png',
+    '/images/projects/1.png',
+    '/images/projects/2.png',
+    '/images/projects/3.png',
+    '/images/projects/4.png',
     'https://via.placeholder.com/1300x500/143a77/FFFFFF',
     'https://via.placeholder.com/1300x500/222f38/FFFFFF',
     'https://via.placeholder.com/1300x500/191b1f/FFFFFF',

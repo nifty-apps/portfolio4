@@ -7,14 +7,15 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import brand from '~/public/text/brand';
-import { useText } from '~/theme/common';
+// import { useText } from '~/theme/common';
 import useStyles from './about-style';
 
 function About() {
   const theme = useTheme();
   const { classes } = useStyles();
-  const { classes: text } = useText();
+  // const { classes: text } = useText();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const { t } = useTranslation('common');
@@ -27,7 +28,7 @@ function About() {
           <Grid item lg={9} xs={12}>
             <div className={classes.about}>
               <div className={classes.reward}>
-                <div className={classes.item}>
+                {/* <div className={classes.item}>
                   <figure>
                     <img src="/images/maskulino/reward1.svg" alt="badge" />
                   </figure>
@@ -47,23 +48,31 @@ function About() {
                   </figure>
                   <Typography component="p" className={text.paragraph}>Best Filmography</Typography>
                   <Typography variant="h5" className={text.subtitle}>Footage</Typography>
-                </div>
+                </div> */}
               </div>
               {!isDesktop && (
                 <Fragment>
                   <div className={classes.socmed}>
-                    <IconButton aria-label="Delete" className={classes.margin} size="small">
-                      <i className="ion-logo-facebook" />
-                    </IconButton>
-                    <IconButton aria-label="Delete" className={classes.margin} size="small">
-                      <i className="ion-logo-twitter" />
-                    </IconButton>
-                    <IconButton aria-label="Delete" className={classes.margin} size="small">
-                      <i className="ion-logo-google" />
-                    </IconButton>
-                    <IconButton aria-label="Delete" className={classes.margin} size="small">
-                      <i className="ion-logo-linkedin" />
-                    </IconButton>
+                    <Link href="https://www.facebook.com/cloud.pieash/" target="_blank">
+                      <IconButton aria-label="Delete" className={classes.margin} size="small">
+                        <i className="ion-logo-facebook" />
+                      </IconButton>
+                    </Link>
+                    <Link href="https://www.instagram.com/cloud_pieash/" target="_blank">
+                      <IconButton aria-label="Delete" className={classes.margin} size="small">
+                        <i className="ion-logo-instagram" />
+                      </IconButton>
+                    </Link>
+                    <Link href="https://twitter.com/Cloud_Pieash" target="_blank">
+                      <IconButton aria-label="Delete" className={classes.margin} size="small">
+                        <i className="ion-logo-twitter" />
+                      </IconButton>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/md-pieash-ahmed-7a6830204/" target="_blank">
+                      <IconButton aria-label="Delete" className={classes.margin} size="small">
+                        <i className="ion-logo-linkedin" />
+                      </IconButton>
+                    </Link>
                   </div>
                   <Typography variant="h5">
                     {t('maskulino-landing.banner_desc')}

@@ -8,7 +8,6 @@ const galleryStyles = makeStyles({ uniqId: 'gallery' })((theme, _params, classes
   selected: {},
   filter: {
     position: 'relative',
-    zIndex: 20,
     display: 'flex',
     overflow: 'auto',
     width: '100%',
@@ -32,9 +31,16 @@ const galleryStyles = makeStyles({ uniqId: 'gallery' })((theme, _params, classes
     }
   },
   massonry: {
-    columns: `${3} 300px`,
-    columnGap: theme.spacing(4),
+  display: 'grid',
+  gridGap: theme.spacing(4),
+  [theme.breakpoints.down('md')]: {
+    gridTemplateColumns: 'repeat(2, 1fr)', // 2 columns on medium screens
   },
+  [theme.breakpoints.up('md')]: {
+    gridTemplateColumns: 'repeat(3, 1fr)', // 3 columns on large screens
+  },
+},
+
   item: {
     marginBottom: theme.spacing(4),
     breakInside: 'avoid',

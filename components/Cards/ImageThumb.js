@@ -13,7 +13,12 @@ export default function ImageThumb(props) {
   const {
     img,
     title,
-    link,
+    description,
+    technology,
+    position,
+    gitClientUrl,
+    gitServerUrl,
+    previewUrl,
     size,
     openPopup
   } = props;
@@ -30,15 +35,31 @@ export default function ImageThumb(props) {
   };
   return (
     <Paper className={cx(classes.imgThumb, setSize(size))}>
-      <ButtonBase onClick={openPopup}>
+      <ButtonBase onClick={openPopup} title="View image">
         <div className={classes.figure}>
           <div className={classes.img} style={{ backgroundImage: `url(${img})` }} />
         </div>
-        <div className={classes.detail}>
-          <Typography variant="h6" className={text.subtitle}>{title}</Typography>
-          <Link href="#">{link}</Link>
-        </div>
       </ButtonBase>
+      <div className={classes.detail}>
+        <Typography variant="h6" className={text.subtitle}>{title}</Typography>
+        <Typography variant="body1" className={text.description}>
+          Description:
+          <span style={{ margin: '4px' }}>{description.slice(0, 100)}</span>
+        </Typography>
+        <Typography style={{ marginTop: '10px' }} variant="body1" className={text.description}>
+          Technologies:
+          <span style={{ margin: '4px' }}>{technology}</span>
+        </Typography>
+        <Typography style={{ marginTop: '10px' }} variant="body1" className={text.description}>
+          Position:
+          <span style={{ margin: '4px' }}>{position}</span>
+        </Typography>
+        <div style={{ marginTop: '10px' }}>
+          <Link href={gitClientUrl} target="_blank"> Client site</Link>
+          <Link style={{ margin: '20px' }} href={gitServerUrl} target="_blank"> Server site</Link>
+          <Link href={previewUrl} target="_blank">Live Link</Link>
+        </div>
+      </div>
     </Paper>
   );
 }
@@ -46,7 +67,12 @@ export default function ImageThumb(props) {
 ImageThumb.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  technology: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  gitClientUrl: PropTypes.string.isRequired,
+  gitServerUrl: PropTypes.string.isRequired,
+  previewUrl: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
   openPopup: PropTypes.func,
 };

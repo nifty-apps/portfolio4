@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import SideNavigation from '../SideNavigation';
 import SideNavigationIcon from '../SideNavigation/SideNavigationIcon';
 import brand from '~/public/text/brand';
@@ -75,7 +76,7 @@ function BannerNav(props) {
                 <Typography variant="h2" className={text.title}>
                   <span>
                     {t('maskulino-landing.banner_me')}
-                    &nbsp;John,&nbsp;
+                    &nbsp;Md. Pieash Ahmed,&nbsp;
                     {brand.maskulino.title}
                   </span>
                 </Typography>
@@ -87,19 +88,27 @@ function BannerNav(props) {
                       </span>
                     </Typography>
                     <div className={classes.socmed}>
-                      <Button variant="outlined" className={classes.download} component="a">Download CV</Button>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-facebook" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-twitter" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-instagram" />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className="ion-logo-linkedin" />
-                      </IconButton>
+                      <Button href="https://drive.google.com/u/1/uc?id=1PzfwY7cc0IRyKJO5LIITdn1E6BttZr25&export=download" target="_blank" variant="outlined" className={classes.download} component="a">Download CV</Button>
+                      <Link href="https://www.facebook.com/cloud.pieash/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-facebook" />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://www.instagram.com/cloud_pieash/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-twitter" />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://twitter.com/Cloud_Pieash" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-instagram" />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://www.linkedin.com/in/md-pieash-ahmed-7a6830204/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className="ion-logo-linkedin" />
+                        </IconButton>
+                      </Link>
                     </div>
                   </Fragment>
                 )}

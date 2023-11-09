@@ -2,8 +2,8 @@ import imgAPI from '~/public/images/imgAPI';
 
 const brand = {
   maskulino: {
-    name: 'John Doe',
-    title: 'Photographer',
+    name: 'Md. Pieash Ahmed',
+    title: 'Web Developer',
     desc: 'Iluxi Profile - React Single Landing Page Template',
     prefix: 'Iluxi',
     footerText: 'Iluxi Theme 2022',

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { useText } from '~/theme/common';
 import Title from '../Title';
 import BlogPostCard from '../Cards/BlogPost';
@@ -15,33 +16,15 @@ import imgApi from '~/public/images/imgAPI';
 const blogData = [
   {
     img: imgApi.photo[0],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
+    title: 'Explore the Power of SSR with Next.js',
+    desc: 'Delivering smooth user experiences is essential in the fast-paced world…',
+    link: 'https://medium.com/@pieash9/explore-the-power-of-server-side-rendering-with-next-js-5c1f0e6f2a9a',
   },
   {
     img: imgApi.photo[1],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[2],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[3],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[4],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
-  },
-  {
-    img: imgApi.photo[5],
-    title: 'Vivamus sit amet interdum elit',
-    desc: 'Ut sed eros finibus, placerat orci id, dapibus mauris. Vestibulum consequat…'
+    title: 'Static Typing for Safer Code',
+    desc: 'One of TypeScript’s standout features that revolutionizes JavaScript development…',
+    link: 'https://medium.com/@pieash9/static-typing-for-safer-code-effe6e16cc3b',
   },
 ];
 
@@ -98,7 +81,7 @@ function Blog() {
         <Typography gutterBottom className={text.paragraph}>
           {t('maskulino-landing.blog_desc')}
         </Typography>
-        <Button className={classes.link} color="secondary" href="#">luxi-theme.blog.com</Button>
+        <Link href="https://medium.com/@pieash9"><Button className={classes.link} color="secondary">https://medium.com/@pieash9</Button></Link>
       </div>
       <div className={classes.sliderWrap}>
         <div className={classes.carousel}>
@@ -116,11 +99,12 @@ function Blog() {
               </div>
             )}
             {blogData.map((item, index) => (
-              <div key={index.toString()} className={classes.item}>
+              <div key={index.title} className={classes.item}>
                 <BlogPostCard
                   img={item.img}
                   title={item.title}
                   desc={item.desc}
+                  link={item.link}
                 />
               </div>
             ))}

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { useText } from '~/theme/common';
 import useStyles from './cards-style';
 
@@ -14,6 +14,7 @@ function BlogPost(props) {
     img,
     title,
     desc,
+    link
   } = props;
   const { t } = useTranslation('common');
 
@@ -26,8 +27,9 @@ function BlogPost(props) {
         <Typography variant="h5" className={text.subtitle2}>{title}</Typography>
         <Typography display="block" component="p" className={text.paragraph}>{desc}</Typography>
       </div>
-      <Button
-        href="#"
+      <Link
+        href={link}
+        target="_blank"
         color="secondary"
         className={classes.readmore}
         classes={{
@@ -36,7 +38,7 @@ function BlogPost(props) {
         }}
       >
         {t('maskulino-landing.read_more')}
-      </Button>
+      </Link>
     </Paper>
   );
 }
@@ -45,6 +47,7 @@ BlogPost.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default BlogPost;

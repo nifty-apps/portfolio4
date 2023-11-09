@@ -9,7 +9,8 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/maskulino-logo.svg';
+import Link from 'next/link';
+import logo from '~/public/images/main.png';
 import brand from '~/public/text/brand';
 import { useText } from '~/theme/common';
 import useStyles from './footer-style';
@@ -46,31 +47,39 @@ function Footer() {
                   </Typography>
                 </div>
                 <div className={classes.socmed}>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-facebook" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-instagram" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-twitter" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-linkedin" />
-                  </IconButton>
+                  <Link href="https://www.facebook.com/cloud.pieash/" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-facebook" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://www.instagram.com/cloud_pieash/" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-instagram" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://twitter.com/Cloud_Pieash" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-twitter" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/md-pieash-ahmed-7a6830204/" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-linkedin" />
+                    </IconButton>
+                  </Link>
                 </div>
-                <Button variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
+                <Button href="https://drive.google.com/u/1/uc?id=1PzfwY7cc0IRyKJO5LIITdn1E6BttZr25&export=download" target="_blank" variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
                 <div className={classes.contact}>
                   <Typography className={text.paragraph}>
                     {t('maskulino-landing.footer_contact')}
                     <br />
-                    +12 345 678 90
+                    +880 16270 01665
                   </Typography>
                   <Divider className={classes.divider} />
                   <Typography className={text.paragraph}>
                     {t('maskulino-landing.footer_hello')}
                     <br />
-                    johndoe.skype
+                    pieash9@gmail.com
                   </Typography>
                 </div>
               </div>

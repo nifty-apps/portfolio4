@@ -15,68 +15,96 @@ import useStyle from './gallery-style';
 
 const portfolio = [
   {
-    img: imgAPI.maskulino[6],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat1'
-  },
-  {
-    img: imgAPI.maskulino[7],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[3],
+    title: 'Shutter Academy',
+    description:
+      'The system enables students to browse, select, and pay for photography classes, while instructors can manage class details and receive feedback from admins for approval. Admins oversee class and user management, assign roles, and facilitate communication among all users.',
+    technology:
+      'React.js, Vite, Tailwinds, DaisyUI, React DaisyUI, Firebase Authentication, Express.js, MongoDB',
+    position: 'Full-stack Developer',
+    gitClientUrl: 'https://github.com/pieash9/shutter-academy-client',
+    gitServerUrl: 'https://github.com/pieash9/shutter-academy-server',
+    previewUrl: 'https://shutter-academy-f96fa.web.app/',
     size: 'long',
-    category: 'cat2'
+    category: 'react'
   },
   {
-    img: imgAPI.maskulino[8],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat3'
-  },
-  {
-    img: imgAPI.maskulino[9],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[1],
+    title: 'Battle Zone Toys',
+    description:
+      'This website offers a diverse collection of action figures and toys for exploration and contribution. Users can add, manage, and search toys, while enjoying secure authentication and personalized experiences.',
+    technology:
+      'React.js, Vite, Tailwinds, DaisyUI, React DaisyUI, Firebase Authentication, Express.js, MongoDB',
+    position: 'Full-stack Developer',
+    gitClientUrl: 'https://github.com/pieash9/battle-zone-toys-client',
+    gitServerUrl: 'https://github.com/pieash9/battle-zone-toys-server',
+    previewUrl: 'https://battle-zone-toys.web.app/',
     size: 'long',
-    category: 'cat1'
+    category: 'react'
   },
   {
-    img: imgAPI.maskulino[10],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat2'
-  },
-  {
-    img: imgAPI.maskulino[11],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat3'
-  },
-  {
-    img: imgAPI.maskulino[12],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat1'
-  },
-  {
-    img: imgAPI.maskulino[14],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
-    size: 'short',
-    category: 'cat2'
-  },
-  {
-    img: imgAPI.maskulino[13],
-    title: 'Aenean facilisis vitae purus',
-    link: 'linkofthisitem.com',
+    img: imgAPI.maskulino[2],
+    title: 'Italian Chef Hub',
+    description:
+      'An online service providing users with the best Italian recipes, including recipe details accessible through login. Users can also save favorite recipes and explore chef details, experience, and recipe count',
+    technology:
+      'React.js, Vite, Tailwinds, DaisyUI, Firebase Authentication, Express.js, MongoDB, Vercel etc',
+    position: 'Full-stack Developer',
+    gitClientUrl: 'https://github.com/pieash9/italian-chef-hub-client',
+    gitServerUrl: 'https://github.com/pieash9/italian-chef-hub-server',
+    previewUrl: 'https://dreamy-sunshine-c64edf.netlify.app/',
     size: 'long',
-    category: 'cat2'
+    category: 'react'
   },
+  {
+    img: imgAPI.maskulino[4],
+    title: 'HatMart (Team project)',
+    description:
+      'Easy online grocery shopping with advanced search, filters, product reviews, and responsive design.  Multiple payment options, delivery choices, and order tracking for a convenient and secure checkout. Empowers administrators with coupon management, a comprehensive dashboard (user and admin specific).',
+    technology:
+      'Next.js, MongoDB, Mongoose, Tailwind CSS, Express.js, Firebase, Vercel, Stripe, JSON Web Token',
+    position: 'Full-stack Developer',
+    gitClientUrl: 'https://github.com/SagorAhamed251245/HatMart_client',
+    gitServerUrl: 'https://github.com/SagorAhamed251245/HatMart_server',
+    previewUrl: 'https://hat-mart-client.vercel.app/',
+    size: 'long',
+    category: 'next'
+  },
+  // {
+  //   img: imgAPI.maskulino[10],
+  //   title: 'Aenean facilisis vitae purus',
+  //   link: 'linkofthisitem.com',
+  //   size: 'short',
+  //   category: 'cat2'
+  // },
+  // {
+  //   img: imgAPI.maskulino[11],
+  //   title: 'Aenean facilisis vitae purus',
+  //   link: 'linkofthisitem.com',
+  //   size: 'short',
+  //   category: 'cat3'
+  // },
+  // {
+  //   img: imgAPI.maskulino[12],
+  //   title: 'Aenean facilisis vitae purus',
+  //   link: 'linkofthisitem.com',
+  //   size: 'short',
+  //   category: 'cat1'
+  // },
+  // {
+  //   img: imgAPI.maskulino[14],
+  //   title: 'Aenean facilisis vitae purus',
+  //   link: 'linkofthisitem.com',
+  //   size: 'short',
+  //   category: 'cat2'
+  // },
+  // {
+  //   img: imgAPI.maskulino[13],
+  //   title: 'Aenean facilisis vitae purus',
+  //   link: 'linkofthisitem.com',
+  //   size: 'long',
+  //   category: 'cat2'
+  // },
 ];
 
 function Gallery() {
@@ -162,18 +190,18 @@ function Gallery() {
             All
           </Button>
           <Button
-            onClick={() => filterChildren('cat1')}
-            className={filter === 'cat1' ? classes.selected : ''}
+            onClick={() => filterChildren('react')}
+            className={filter === 'react' ? classes.selected : ''}
           >
-            Category 1
+            React.JS
           </Button>
           <Button
-            onClick={() => filterChildren('cat2')}
-            className={filter === 'cat2' ? classes.selected : ''}
+            onClick={() => filterChildren('next')}
+            className={filter === 'next' ? classes.selected : ''}
           >
-            Category 2
+            Next.JS
           </Button>
-          <Button
+          {/* <Button
             onClick={() => filterChildren('cat3')}
             className={filter === 'cat3' ? classes.selected : ''}
           >
@@ -190,7 +218,7 @@ function Gallery() {
             className={filter === 'cat5' ? classes.selected : ''}
           >
             Category 5
-          </Button>
+          </Button> */}
         </div>
         {!isTablet ? (
           <Fragment>
@@ -198,7 +226,7 @@ function Gallery() {
               {data.map((item, index) => (
                 <div
                   className={classes.item}
-                  key={index.toString()}
+                  key={item.title}
                   id={index.toString()}
                 >
                   <ScrollAnimation
@@ -211,7 +239,12 @@ function Gallery() {
                     <ImageThumbCard
                       img={item.img}
                       title={item.title}
-                      link={item.link}
+                      description={item.description}
+                      technology={item.technology}
+                      position={item.position}
+                      gitClientUrl={item.gitClientUrl}
+                      gitServerUrl={item.gitServerUrl}
+                      previewUrl={item.previewUrl}
                       size={item.size}
                       openPopup={() => showPopup(index)}
                     />
@@ -229,12 +262,17 @@ function Gallery() {
                 {data.map((item, index) => (
                   <div
                     className={classes.itemCarousel}
-                    key={index.toString()}
+                    key={item.title}
                   >
                     <ImageThumbCard
                       img={item.img}
                       title={item.title}
-                      link={item.link}
+                      description={item.description}
+                      technology={item.technology}
+                      position={item.position}
+                      gitClientUrl={item.gitClientUrl}
+                      gitServerUrl={item.gitServerUrl}
+                      previewUrl={item.previewUrl}
                       size={item.size}
                       openPopup={() => showPopup(index)}
                     />

@@ -14,7 +14,7 @@ import BannerNav from '~/components/BannerNav';
 import About from '~/components/About';
 import Timeline from '~/components/Timeline';
 import Counter from '~/components/Counter';
-import Services from '~/components/Services';
+// import Services from '~/components/Services';
 import Gallery from '~/components/Gallery';
 import Testimonials from '~/components/Testimonials';
 import Blog from '~/components/Blog';
@@ -101,9 +101,9 @@ function Landing(props) {
         <div className={classes.greyBg}>
           <div className={classes.parallaxWrap}>
             <Decoration />
-            <section id="services">
+            {/* <section id="services">
               <Services />
-            </section>
+            </section> */}
             <section id="my-work" className={cx(classes.spaceTopShort, classes.spaceBottomShort)}>
               <Gallery />
             </section>

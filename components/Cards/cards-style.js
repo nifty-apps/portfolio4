@@ -239,6 +239,9 @@ const cardsStyles = makeStyles({ uniqId: 'cards' })((theme, _params, classes) =>
     },
     margin: theme.spacing(0, 3),
     lineHeight: '16px !important',
+    textTransform: 'upperCase',
+    fontWeight: 'bold',
+    textDecoration: 'none'
   },
   textReadmore: {
     padding: '0px !important',

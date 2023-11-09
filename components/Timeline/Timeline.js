@@ -5,6 +5,13 @@ import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import ScrollAnimation from 'react-scroll-animation-wrapper';
 import LinearProgress from '@mui/material/LinearProgress';
+import { FaReact } from 'react-icons/fa';
+import {
+  BiLogoGraphql,
+  BiLogoJavascript,
+  BiLogoRedux,
+  BiLogoTypescript
+} from 'react-icons/bi';
 import Typography from '@mui/material/Typography';
 import { useTranslation } from 'next-i18next';
 import { useText } from '~/theme/common';
@@ -54,13 +61,14 @@ function Timeline() {
                       duration={0.3}
                     >
                       <div>
-                        <Typography variant="h3" gutterBottom className={text.subtitle2}>Creative Director</Typography>
-                        <Typography gutterBottom>at Fourth Company</Typography>
-                        <Typography className={classes.time}>2015 - Present</Typography>
+                        <Typography variant="h3" gutterBottom className={text.subtitle2}>ReactJS Developer </Typography>
+                        <Typography variant="body1" style={{ fontWeight: 'bold' }} gutterBottom> At Nifty IT Solution Ltd</Typography>
+                        <Typography gutterBottom>Internship</Typography>
+                        <Typography className={classes.time}>September, 2023 - Present</Typography>
                       </div>
                     </ScrollAnimation>
                   </li>
-                  <li>
+                  {/* <li>
                     <ScrollAnimation
                       animateOnce
                       animateIn="fadeInLeftShort"
@@ -104,7 +112,7 @@ function Timeline() {
                         <Typography className={classes.time}>2009 - 2011</Typography>
                       </div>
                     </ScrollAnimation>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </Grid>
@@ -123,8 +131,8 @@ function Timeline() {
                   <ul>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-color-wand" />
-                        <Typography variant="h6" className={text.subtitle2}>UI Interface Design</Typography>
+                        <FaReact size={22} />
+                        <Typography variant="h6" className={text.subtitle2}>ReactJS</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
@@ -137,8 +145,8 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-logo-dribbble" />
-                        <Typography variant="h6" className={text.subtitle2}>Icon Design</Typography>
+                        <BiLogoTypescript size={26} />
+                        <Typography variant="h6" className={text.subtitle2}>TypeScript</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
@@ -151,40 +159,40 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-globe" />
-                        <Typography variant="h6" className={text.subtitle2}>HTML Prototyping</Typography>
-                      </div>
-                      <LinearProgress
-                        variant="determinate"
-                        value={play ? 60 : 0}
-                        classes={{
-                          root: classes.progressBg,
-                          bar: classes.bar
-                        }}
-                      />
-                    </li>
-                    <li>
-                      <div className={classes.textIcon}>
-                        <i className="ion-ios-camera" />
-                        <Typography variant="h6" className={text.subtitle2}>Photo Editing</Typography>
-                      </div>
-                      <LinearProgress
-                        variant="determinate"
-                        value={play ? 90 : 0}
-                        classes={{
-                          root: classes.progressBg,
-                          bar: classes.bar
-                        }}
-                      />
-                    </li>
-                    <li>
-                      <div className={classes.textIcon}>
-                        <i className="ion-ios-snow" />
-                        <Typography variant="h6" className={text.subtitle2}>Graphic Illustrations</Typography>
+                        <BiLogoJavascript size={26} />
+                        <Typography variant="h6" className={text.subtitle2}>JavaScript</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
                         value={play ? 80 : 0}
+                        classes={{
+                          root: classes.progressBg,
+                          bar: classes.bar
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <div className={classes.textIcon}>
+                        <BiLogoGraphql size={26} />
+                        <Typography variant="h6" className={text.subtitle2}>GraphQL</Typography>
+                      </div>
+                      <LinearProgress
+                        variant="determinate"
+                        value={play ? 70 : 0}
+                        classes={{
+                          root: classes.progressBg,
+                          bar: classes.bar
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <div className={classes.textIcon}>
+                        <BiLogoRedux size={26} />
+                        <Typography variant="h6" className={text.subtitle2}>Redux</Typography>
+                      </div>
+                      <LinearProgress
+                        variant="determinate"
+                        value={play ? 75 : 0}
                         classes={{
                           root: classes.progressBg,
                           bar: classes.bar

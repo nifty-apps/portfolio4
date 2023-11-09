@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Fade from '@mui/material/Fade';
 import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/maskulino-logo.svg';
+import logo from '~/public/images/main.png';
 import brand from '~/public/text/brand';
 import { useText } from '~/theme/common';
 import routeLink from '~/public/text/link';
@@ -181,32 +181,40 @@ function Header(props) {
                         {brand.maskulino.title}
                       </Typography>
                     </div>
-                    <Button variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
+                    <Button href="https://drive.google.com/u/1/uc?id=1PzfwY7cc0IRyKJO5LIITdn1E6BttZr25&export=download" target="_blank" variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
                     <div className={classes.socmed}>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-facebook', classes.fb)} />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-instagram', classes.ig)} />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-twitter', classes.tw)} />
-                      </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-linkedin', classes.in)} />
-                      </IconButton>
+                      <Link href="https://www.facebook.com/cloud.pieash/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className={cx('ion-logo-facebook', classes.fb)} />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://www.instagram.com/cloud_pieash/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className={cx('ion-logo-instagram', classes.ig)} />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://twitter.com/Cloud_Pieash" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className={cx('ion-logo-twitter', classes.tw)} />
+                        </IconButton>
+                      </Link>
+                      <Link href="https://www.linkedin.com/in/md-pieash-ahmed-7a6830204/" target="_blank">
+                        <IconButton aria-label="Delete" className={classes.margin} size="small">
+                          <i className={cx('ion-logo-linkedin', classes.in)} />
+                        </IconButton>
+                      </Link>
                     </div>
                     <div className={classes.contact}>
                       <Typography className={text.paragraph}>
                         {t('maskulino-landing.footer_contact')}
                         <br />
-                        +12 345 678 90
+                        +880 16270 01665
                       </Typography>
                       <Divider className={classes.divider} />
                       <Typography className={text.paragraph}>
                         {t('maskulino-landing.footer_hello')}
                         <br />
-                        jenadoe.skype
+                        pieash9.skype
                       </Typography>
                     </div>
                   </div>
