@@ -29,7 +29,7 @@ export const useText = makeStyles({ uniqId: "text" })((theme) => ({
     fontWeight: theme.typography.fontWeightBold,
     fontSize: 48,
     lineHeight: "50px",
-    color: "blue",
+    color: "#2962ff",
     [theme.breakpoints.down("lg")]: {
       fontSize: 38,
       lineHeight: "40px",

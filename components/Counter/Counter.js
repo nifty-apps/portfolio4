@@ -7,6 +7,7 @@ import Container from "@mui/material/Container";
 import { useTranslation } from "next-i18next";
 import { useText } from "~/theme/common";
 import useStyles from "./counter-style";
+import github from "~public/images/logos/github.png";
 
 function Counter() {
   const { classes } = useStyles();
@@ -61,7 +62,7 @@ function Counter() {
               <div className={classes.text}>
                 <i className="ion-ios-book-outline" />
                 <Typography variant="h4" className={text.title}>
-                  {countup(4567, play)}
+                  {countup(1, play)} Tec
                 </Typography>
               </div>
               <Typography variant="h6" className={text.subtitle2}>
@@ -72,9 +73,9 @@ function Counter() {
           <Grid md={4} item>
             <div className={classes.counterItem}>
               <div className={classes.text}>
-                <i className="ion-ios-heart-outline" />
+                <i className="ion-ios-mobile" />
                 <Typography variant="h4" className={text.title}>
-                  {countup(89, play)}
+                  {countup(24, play)}/7
                 </Typography>
               </div>
               <Typography variant="h6" className={text.subtitle2}>
