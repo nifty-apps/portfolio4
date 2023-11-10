@@ -1,25 +1,25 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import PropTypes from 'prop-types';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import Link from 'next/link';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Fade from '@mui/material/Fade';
-import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/maskulino-logo.svg';
-import brand from '~/public/text/brand';
-import { useText } from '~/theme/common';
-import routeLink from '~/public/text/link';
-import useStyles from './header-style';
-import Settings from '../Settings';
-import navMenu from '../SideNavigation/menu';
+import React, { useState, useEffect, Fragment } from "react";
+import PropTypes from "prop-types";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import AppBar from "@mui/material/AppBar";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Link from "next/link";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import Fade from "@mui/material/Fade";
+import { useTranslation } from "next-i18next";
+import logo from "~/public/images/aalogo.png";
+import brand from "~/public/text/brand";
+import { useText } from "~/theme/common";
+import routeLink from "~/public/text/link";
+import useStyles from "./header-style";
+import Settings from "../Settings";
+import navMenu from "../SideNavigation/menu";
 
 let counter = 0;
 function createData(name, url, offset) {
@@ -32,15 +32,16 @@ function createData(name, url, offset) {
   };
 }
 
-const LinkBtn = React.forwardRef(function LinkBtn(props, ref) { // eslint-disable-line
+const LinkBtn = React.forwardRef(function LinkBtn(props, ref) {
+  // eslint-disable-line
   return <AnchorLink to={props.to} {...props} />; // eslint-disable-line
 });
 
 function Header(props) {
   // Theme breakpoints
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const { classes: text } = useText();
 
   const [fixed, setFixed] = useState(false);
@@ -48,7 +49,7 @@ function Header(props) {
   const handleScroll = () => {
     const doc = document.documentElement;
     const scroll = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    const newFlagFixed = (scroll > 80);
+    const newFlagFixed = scroll > 80;
     if (flagFixed !== newFlagFixed) {
       setFixed(newFlagFixed);
       flagFixed = newFlagFixed;
@@ -56,41 +57,37 @@ function Header(props) {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
   }, []);
 
   const { classes, cx } = useStyles();
-  const {
-    onToggleDark,
-    onToggleDir,
-    invert,
-  } = props;
-  const { t, i18n } = useTranslation('common');
-  const curLang = '/' + i18n.language;
+  const { onToggleDark, onToggleDir, invert } = props;
+  const { t, i18n } = useTranslation("common");
+  const curLang = "/" + i18n.language;
 
   const [menuList] = useState([
-    createData(navMenu[0], '#' + navMenu[0]),
-    createData(navMenu[1], '#' + navMenu[1], -100),
-    createData(navMenu[2], '#' + navMenu[2]),
-    createData(navMenu[3], '#' + navMenu[3], -40),
-    createData(navMenu[4], '#' + navMenu[4], -40),
-    createData(navMenu[5], '#' + navMenu[5], -40),
+    createData(navMenu[0], "#" + navMenu[0]),
+    createData(navMenu[1], "#" + navMenu[1], -100),
+    createData(navMenu[2], "#" + navMenu[2]),
+    createData(navMenu[3], "#" + navMenu[3], -40),
+    createData(navMenu[4], "#" + navMenu[4], -40),
+    createData(navMenu[5], "#" + navMenu[5], -40),
   ]);
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
     setOpenDrawer(!openDrawer);
-    const body = document.getElementsByTagName('body');
+    const body = document.getElementsByTagName("body");
     if (openDrawer) {
-      body[0].style.overflow = 'auto';
+      body[0].style.overflow = "auto";
     } else {
-      body[0].style.overflow = 'hidden';
+      body[0].style.overflow = "hidden";
     }
   };
 
   const handleCloseDrawer = () => {
     setOpenDrawer(false);
-    const body = document.getElementsByTagName('body');
-    body[0].style.overflow = 'auto';
+    const body = document.getElementsByTagName("body");
+    body[0].style.overflow = "auto";
   };
 
   return (
@@ -101,7 +98,7 @@ function Header(props) {
         id="header"
         className={cx(
           classes.header,
-          invert || fixed || isMobile ? classes.fixed : '',
+          invert || fixed || isMobile ? classes.fixed : "",
           openDrawer && classes.openDrawer
         )}
       >
@@ -110,11 +107,15 @@ function Header(props) {
             <nav className={cx(classes.navLogo, invert && classes.invert)}>
               <IconButton
                 onClick={handleOpenDrawer}
-                className={cx('hamburger hamburger--squeeze', classes.mobileMenu, openDrawer && 'is-active')}
+                className={cx(
+                  "hamburger hamburger--squeeze",
+                  classes.mobileMenu,
+                  openDrawer && "is-active"
+                )}
                 size="large"
               >
                 <span className="hamburger-box">
-                  <span className={cx(classes.bar, 'hamburger-inner')} />
+                  <span className={cx(classes.bar, "hamburger-inner")} />
                 </span>
               </IconButton>
               <div className={classes.logo}>
@@ -128,7 +129,11 @@ function Header(props) {
                   </AnchorLink>
                 )}
               </div>
-              <Settings toggleDark={onToggleDark} toggleDir={onToggleDir} invert={invert} />
+              <Settings
+                toggleDark={onToggleDark}
+                toggleDir={onToggleDir}
+                invert={invert}
+              />
             </nav>
           </div>
         </Container>
@@ -148,16 +153,24 @@ function Header(props) {
                     {openDrawer && (
                       <ul className={classes.menu}>
                         {menuList.map((item, index) => (
-                          <li key={item.id.toString()} style={{ animationDuration: index * 0.15 + 's' }}>
+                          <li
+                            key={item.id.toString()}
+                            style={{ animationDuration: index * 0.15 + "s" }}
+                          >
                             {invert ? (
                               // eslint-disable-next-line
-                              <Button href={'/' + item.url}>
-                                {t('maskulino-landing.header_' + item.name)}
+                              <Button href={"/" + item.url}>
+                                {t("maskulino-landing.header_" + item.name)}
                               </Button>
                             ) : (
                               // eslint-disable-next-line
-                              <Button component={LinkBtn} onClick={handleCloseDrawer} offset={item.offset || 0} href={item.url}>
-                                {t('maskulino-landing.header_' + item.name)}
+                              <Button
+                                component={LinkBtn}
+                                onClick={handleCloseDrawer}
+                                offset={item.offset || 0}
+                                href={item.url}
+                              >
+                                {t("maskulino-landing.header_" + item.name)}
                               </Button>
                             )}
                           </li>
@@ -181,30 +194,53 @@ function Header(props) {
                         {brand.maskulino.title}
                       </Typography>
                     </div>
-                    <Button variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className={classes.download}
+                      component="a"
+                    >
+                      Download CV
+                    </Button>
                     <div className={classes.socmed}>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-facebook', classes.fb)} />
+                      <IconButton
+                        aria-label="Delete"
+                        className={classes.margin}
+                        size="small"
+                      >
+                        <i className={cx("ion-logo-facebook", classes.fb)} />
                       </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-instagram', classes.ig)} />
+                      <IconButton
+                        aria-label="Delete"
+                        className={classes.margin}
+                        size="small"
+                      >
+                        <i className={cx("ion-logo-instagram", classes.ig)} />
                       </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-twitter', classes.tw)} />
+                      <IconButton
+                        aria-label="Delete"
+                        className={classes.margin}
+                        size="small"
+                      >
+                        <i className={cx("ion-logo-twitter", classes.tw)} />
                       </IconButton>
-                      <IconButton aria-label="Delete" className={classes.margin} size="small">
-                        <i className={cx('ion-logo-linkedin', classes.in)} />
+                      <IconButton
+                        aria-label="Delete"
+                        className={classes.margin}
+                        size="small"
+                      >
+                        <i className={cx("ion-logo-linkedin", classes.in)} />
                       </IconButton>
                     </div>
                     <div className={classes.contact}>
                       <Typography className={text.paragraph}>
-                        {t('maskulino-landing.footer_contact')}
+                        {t("maskulino-landing.footer_contact")}
                         <br />
                         +12 345 678 90
                       </Typography>
                       <Divider className={classes.divider} />
                       <Typography className={text.paragraph}>
-                        {t('maskulino-landing.footer_hello')}
+                        {t("maskulino-landing.footer_hello")}
                         <br />
                         jenadoe.skype
                       </Typography>
@@ -227,7 +263,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  invert: false
+  invert: false,
 };
 
 export default Header;
