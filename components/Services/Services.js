@@ -13,32 +13,33 @@ import framework from "~/public/images/logos/framework.png";
 import staticweb from "~/public/images/logos/static.png";
 import next from "~/public/images/logos/next.png";
 import server from "~/public/images/logos/nodeJs.png";
+import api from "~/public/images/logos/api.png";
 
 const services = [
   {
     icon: framework,
-    name: "UI Interface Design",
-    desc: "Pellentesque ac  vel blandit nulla.",
+    name: "Reactive Design",
+    desc: "I can provide reactive design for your website.",
   },
   {
     icon: staticweb,
-    name: "Icon Design",
-    desc: "Pellentesque ac  vel blandit nulla.",
+    name: "Static Website",
+    desc: "Get your static (HTML, CSS, JS) website from me.",
   },
   {
     icon: next,
-    name: "HTML Prototyping",
-    desc: "Pellentesque ac  vel blandit nulla.",
+    name: "Server rendered",
+    desc: "Get a full stack or server rendered website from me.",
   },
   {
     icon: server,
-    name: "Photo Editing",
-    desc: "Pellentesque ac  vel blandit nulla.",
+    name: "Full stack",
+    desc: "Get a full stack website with mongodb from me.",
   },
   {
-    icon: "ion-ios-snow",
-    name: "Graphic Illustrations",
-    desc: "Pellentesque ac  vel blandit nulla.",
+    icon: api,
+    name: "API Integration",
+    desc: "Providing a through API integration with REST & GraphQL.",
   },
 ];
 

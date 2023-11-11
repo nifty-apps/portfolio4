@@ -88,7 +88,12 @@ const cardsStyles = makeStyles({ uniqId: "cards" })(
       color: theme.palette.common.white,
     },
     figure: {},
-    img: {},
+    img: {
+      position: "relative",
+      overflow: "hidden",
+      margin: 0,
+      objectFit: "contain",
+    },
     imgThumb: {
       border: `8px solid ${theme.palette.background.paper}`,
       position: "relative",
@@ -109,7 +114,8 @@ const cardsStyles = makeStyles({ uniqId: "cards" })(
         width: "100%",
         height: "100%",
         backgroundSize: "cover",
-        transform: "scale(1.1)",
+        transform: "scale(0.95)",
+        backgroundRepeat: "no-repeat",
         transition: "transform 0.2s ease-out",
       },
       "&:hover": {

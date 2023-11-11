@@ -1,10 +1,10 @@
 const menu = [
-  'about',
-  'services',
-  'my-work',
-  'testimonials',
-  'blog',
-  'contact',
+  "about",
+  "services",
+  "my-work",
+  "testimonials",
+  "contact",
+  // "blog",
 ];
 
 export default menu;
