@@ -71,7 +71,7 @@ function Header(props) {
     createData(navMenu[2], "#" + navMenu[2]),
     createData(navMenu[3], "#" + navMenu[3], -40),
     createData(navMenu[4], "#" + navMenu[4], -40),
-    createData(navMenu[5], "#" + navMenu[5], -40),
+    // createData(navMenu[5], "#" + navMenu[5], -40),
   ]);
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleOpenDrawer = () => {
@@ -194,55 +194,91 @@ function Header(props) {
                         {brand.maskulino.title}
                       </Typography>
                     </div>
-                    <Button
-                      variant="outlined"
-                      color="primary"
-                      className={classes.download}
-                      component="a"
+                    <a
+                      href="https://docs.google.com/document/d/1AabYcK1XUnV3xgopThy9LAJqhFJ2BZlPAK5K7K_em50/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className=""
                     >
-                      Download CV
-                    </Button>
+                      <Button
+                        variant="outlined"
+                        className={classes.download}
+                        component="a"
+                      >
+                        Download CV
+                      </Button>
+                    </a>
                     <div className={classes.socmed}>
-                      <IconButton
-                        aria-label="Delete"
-                        className={classes.margin}
-                        size="small"
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100008742093722"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
                       >
-                        <i className={cx("ion-logo-facebook", classes.fb)} />
-                      </IconButton>
-                      <IconButton
-                        aria-label="Delete"
-                        className={classes.margin}
-                        size="small"
+                        <IconButton
+                          aria-label="Delete"
+                          className={classes.margin}
+                          size="small"
+                        >
+                          <i className={cx("ion-logo-facebook", classes.fb)} />
+                        </IconButton>
+                      </a>
+
+                      <a
+                        href="https://twitter.com/AlAminKhan6203"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
                       >
-                        <i className={cx("ion-logo-instagram", classes.ig)} />
-                      </IconButton>
-                      <IconButton
-                        aria-label="Delete"
-                        className={classes.margin}
-                        size="small"
+                        <IconButton
+                          aria-label="Delete"
+                          className={classes.margin}
+                          size="small"
+                        >
+                          <i className={cx("ion-logo-twitter", classes.tw)} />
+                        </IconButton>
+                      </a>
+
+                      <a
+                        href="https://www.linkedin.com/in/alaminkhan03/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
                       >
-                        <i className={cx("ion-logo-twitter", classes.tw)} />
-                      </IconButton>
-                      <IconButton
-                        aria-label="Delete"
-                        className={classes.margin}
-                        size="small"
+                        <IconButton
+                          aria-label="Delete"
+                          className={classes.margin}
+                          size="small"
+                        >
+                          <i className={cx("ion-logo-linkedin", classes.in)} />
+                        </IconButton>
+                      </a>
+                      <a
+                        href="https://github.com/AlAminKh03"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className=""
                       >
-                        <i className={cx("ion-logo-linkedin", classes.in)} />
-                      </IconButton>
+                        <IconButton
+                          aria-label="Delete"
+                          className={classes.margin}
+                          size="small"
+                        >
+                          <i className="ion-logo-github" />
+                        </IconButton>
+                      </a>
                     </div>
                     <div className={classes.contact}>
                       <Typography className={text.paragraph}>
                         {t("maskulino-landing.footer_contact")}
                         <br />
-                        +12 345 678 90
+                        +880 178567 6641
                       </Typography>
                       <Divider className={classes.divider} />
                       <Typography className={text.paragraph}>
                         {t("maskulino-landing.footer_hello")}
                         <br />
-                        jenadoe.skype
+                        alaminkhan6203@gmail.com
                       </Typography>
                     </div>
                   </div>

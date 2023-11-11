@@ -129,13 +129,7 @@ function BannerNav(props) {
                           <i className="ion-logo-twitter" />
                         </IconButton>
                       </a>
-                      {/* <IconButton
-                        aria-label="Delete"
-                        className={classes.margin}
-                        size="small"
-                      >
-                        <i className="ion-logo-instagram" />
-                      </IconButton> */}
+
                       <a
                         href="https://www.linkedin.com/in/alaminkhan03/"
                         target="_blank"

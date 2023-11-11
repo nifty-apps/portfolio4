@@ -16,7 +16,7 @@ import useStyles from "./footer-style";
 import ContactForm from "../Contact/Form";
 
 function Footer() {
-  const { classes } = useStyles();
+  const { classes, cx } = useStyles();
   const { classes: text } = useText();
   const { t } = useTranslation("common");
 
@@ -50,54 +50,90 @@ function Footer() {
                   </Typography>
                 </div>
                 <div className={classes.socmed}>
-                  <IconButton
-                    aria-label="Delete"
-                    className={classes.margin}
-                    size="small"
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100008742093722"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                   >
-                    <i className="ion-logo-facebook" />
-                  </IconButton>
-                  <IconButton
-                    aria-label="Delete"
-                    className={classes.margin}
-                    size="small"
+                    <IconButton
+                      aria-label="Delete"
+                      className={classes.margin}
+                      size="small"
+                    >
+                      <i className={cx("ion-logo-facebook", classes.fb)} />
+                    </IconButton>
+                  </a>
+
+                  <a
+                    href="https://twitter.com/AlAminKhan6203"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                   >
-                    <i className="ion-logo-instagram" />
-                  </IconButton>
-                  <IconButton
-                    aria-label="Delete"
-                    className={classes.margin}
-                    size="small"
+                    <IconButton
+                      aria-label="Delete"
+                      className={classes.margin}
+                      size="small"
+                    >
+                      <i className={cx("ion-logo-twitter", classes.tw)} />
+                    </IconButton>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/alaminkhan03/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                   >
-                    <i className="ion-logo-twitter" />
-                  </IconButton>
-                  <IconButton
-                    aria-label="Delete"
-                    className={classes.margin}
-                    size="small"
+                    <IconButton
+                      aria-label="Delete"
+                      className={classes.margin}
+                      size="small"
+                    >
+                      <i className={cx("ion-logo-linkedin", classes.in)} />
+                    </IconButton>
+                  </a>
+                  <a
+                    href="https://github.com/AlAminKh03"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
                   >
-                    <i className="ion-logo-linkedin" />
-                  </IconButton>
+                    <IconButton
+                      aria-label="Delete"
+                      className={classes.margin}
+                      size="small"
+                    >
+                      <i className="ion-logo-github" />
+                    </IconButton>
+                  </a>
                 </div>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  className={classes.download}
-                  component="a"
+                <a
+                  href="https://docs.google.com/document/d/1AabYcK1XUnV3xgopThy9LAJqhFJ2BZlPAK5K7K_em50/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=""
                 >
-                  Download CV
-                </Button>
+                  <Button
+                    variant="outlined"
+                    className={classes.download}
+                    component="a"
+                  >
+                    Download CV
+                  </Button>
+                </a>
                 <div className={classes.contact}>
                   <Typography className={text.paragraph}>
                     {t("maskulino-landing.footer_contact")}
                     <br />
-                    +12 345 678 90
+                    +880 178 567 6641
                   </Typography>
                   <Divider className={classes.divider} />
                   <Typography className={text.paragraph}>
                     {t("maskulino-landing.footer_hello")}
                     <br />
-                    johndoe.skype
+                    alaminkhan6203@gmail.com
                   </Typography>
                 </div>
               </div>
