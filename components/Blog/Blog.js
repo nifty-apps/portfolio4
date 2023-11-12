@@ -52,23 +52,26 @@ function Blog() {
     infinite: false,
     speed: 500,
     autoplay: false,
-    slidesToShow: 4,
+    slidesToShow: isDesktop ? 4 : 1,
     arrows: false,
     pauseOnHover: true,
-    variableWidth: true,
-    responsive: [{
-      breakpoint: 1080,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
-    }, {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
+    ]
   };
 
   if (theme.direction === 'rtl') {

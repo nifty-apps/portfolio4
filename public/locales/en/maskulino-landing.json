@@ -36,7 +36,7 @@
   "footer_hello": "Address",
   "contact_title": "Contact Me.",
   "form_name": "What is your name? *",
-  "form_email": "What it your email? *",
-  "form_message": "Write your message here",
+  "form_email": "What is your email? *",
+  "form_message": "Write your messages here...*",
   "form_send": "Send Message"
 }

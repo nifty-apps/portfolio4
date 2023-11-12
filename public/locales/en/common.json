@@ -12,7 +12,7 @@
   "form_email": "What it your email? *",
   "form_phone": "What is your phone number?",
   "form_company": "What is your company?",
-  "form_message": "Write your message here",
+  "form_message": "Write your message here...*",
   "form_terms": "I have read and accept the Terms of",
   "form_privacy": "Service & Privacy Policy *",
   "form_send": "Send Message",
@@ -62,8 +62,8 @@
     "footer_hello": "Address",
     "contact_title": "Contact Me.",
     "form_name": "What is your name? *",
-    "form_email": "What it your email? *",
-    "form_message": "Write your message here",
+    "form_email": "What is your email? *",
+    "form_message": "Write your message here...*",
     "form_send": "Send Message"
   }
 }

@@ -107,7 +107,8 @@ const aboutStyles = makeStyles({ uniqId: 'about' })(theme => ({
       minHeight: 200,
       height: 'auto',
       marginLeft: 'auto',
-      marginRight: 'auto'
+      marginRight: 'auto',
+      marginTop: -110,
     },
     '& figure': {
       margin: 0,
