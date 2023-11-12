@@ -98,14 +98,17 @@ const aboutStyles = makeStyles({ uniqId: 'about' })(theme => ({
     marginTop: -140,
     background: theme.palette.common.white,
     width: 270,
-    height: 335,
+    height: 240,
     zIndex: 1,
+    paddingTop: 3,
     [theme.breakpoints.down('md')]: {
       width: 200,
+      paddingTop: 16,
       minHeight: 200,
       height: 'auto',
       marginLeft: 'auto',
-      marginRight: 'auto'
+      marginRight: 'auto',
+      marginTop: -110,
     },
     '& figure': {
       margin: 0,
@@ -120,7 +123,7 @@ const aboutStyles = makeStyles({ uniqId: 'about' })(theme => ({
     width: '90%',
     left: '5%',
     top: theme.spacing(2),
-    height: '105%',
+    height: '100%',
     border: '2px solid',
     borderImageSource: `linear-gradient(120deg, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
     borderImageSlice: 1,

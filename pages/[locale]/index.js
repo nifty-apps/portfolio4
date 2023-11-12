@@ -78,7 +78,7 @@ function Landing(props) {
     <React.Fragment>
       <Head>
         <title>
-          { brand.maskulino.name + ' - Profile' }
+          { brand.maskulino.name + ' - Portfolio' }
         </title>
       </Head>
       <CssBaseline />

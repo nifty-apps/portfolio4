@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import {
+  BiLogoGraphql,
+  BiLogoJavascript,
+  BiLogoTypescript,
+} from 'react-icons/bi';
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
@@ -54,9 +60,9 @@ function Timeline() {
                       duration={0.3}
                     >
                       <div>
-                        <Typography variant="h3" gutterBottom className={text.subtitle2}>Creative Director</Typography>
-                        <Typography gutterBottom>at Fourth Company</Typography>
-                        <Typography className={classes.time}>2015 - Present</Typography>
+                        <Typography variant="h3" gutterBottom className={text.subtitle2}>React Developer</Typography>
+                        <Typography gutterBottom>Nifty IT Solution Ltd. - Internship</Typography>
+                        <Typography className={classes.time}>Sep 2023 - Present</Typography>
                       </div>
                     </ScrollAnimation>
                   </li>
@@ -69,39 +75,9 @@ function Timeline() {
                       duration={0.3}
                     >
                       <div>
-                        <Typography variant="h3" gutterBottom className={text.subtitle2}>Senior UI/UX Designer</Typography>
-                        <Typography gutterBottom>at Third Company</Typography>
-                        <Typography className={classes.time}>2013 - 2015</Typography>
-                      </div>
-                    </ScrollAnimation>
-                  </li>
-                  <li>
-                    <ScrollAnimation
-                      animateOnce
-                      animateIn="fadeInLeftShort"
-                      offset={200}
-                      delay={400}
-                      duration={0.3}
-                    >
-                      <div>
-                        <Typography variant="h3" gutterBottom className={text.subtitle2}>UI/UX Designer</Typography>
-                        <Typography gutterBottom>at Second Company</Typography>
-                        <Typography className={classes.time}>2012 - 2013</Typography>
-                      </div>
-                    </ScrollAnimation>
-                  </li>
-                  <li>
-                    <ScrollAnimation
-                      animateOnce
-                      animateIn="fadeInLeftShort"
-                      offset={300}
-                      delay={500}
-                      duration={0.3}
-                    >
-                      <div>
-                        <Typography variant="h3" gutterBottom className={text.subtitle2}>UI/UX Designer</Typography>
-                        <Typography gutterBottom>at First Company</Typography>
-                        <Typography className={classes.time}>2009 - 2011</Typography>
+                        <Typography variant="h3" gutterBottom className={text.subtitle2}>Web Developer</Typography>
+                        <Typography gutterBottom>at Web-IT-Rangpur </Typography>
+                        <Typography className={classes.time}>2021 - 2022</Typography>
                       </div>
                     </ScrollAnimation>
                   </li>
@@ -123,8 +99,8 @@ function Timeline() {
                   <ul>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-color-wand" />
-                        <Typography variant="h6" className={text.subtitle2}>UI Interface Design</Typography>
+                        <FaReact size={23} />
+                        <Typography variant="h6" className={text.subtitle2}>React Js</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
@@ -137,8 +113,22 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-logo-dribbble" />
-                        <Typography variant="h6" className={text.subtitle2}>Icon Design</Typography>
+                        <BiLogoJavascript size={25} />
+                        <Typography variant="h6" className={text.subtitle2}>JavaScript</Typography>
+                      </div>
+                      <LinearProgress
+                        variant="determinate"
+                        value={play ? 75 : 0}
+                        classes={{
+                          root: classes.progressBg,
+                          bar: classes.bar
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <div className={classes.textIcon}>
+                        <BiLogoTypescript size={25} />
+                        <Typography variant="h6" className={text.subtitle2}>TypeScript</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
@@ -151,12 +141,12 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-globe" />
-                        <Typography variant="h6" className={text.subtitle2}>HTML Prototyping</Typography>
+                        <FaNodeJs size={23} />
+                        <Typography variant="h6" className={text.subtitle2}>Node Js</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
-                        value={play ? 60 : 0}
+                        value={play ? 65 : 0}
                         classes={{
                           root: classes.progressBg,
                           bar: classes.bar
@@ -165,12 +155,12 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-camera" />
-                        <Typography variant="h6" className={text.subtitle2}>Photo Editing</Typography>
+                        <FaDatabase size={25} />
+                        <Typography variant="h6" className={text.subtitle2}>MongoDB</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
-                        value={play ? 90 : 0}
+                        value={play ? 75 : 0}
                         classes={{
                           root: classes.progressBg,
                           bar: classes.bar
@@ -179,12 +169,12 @@ function Timeline() {
                     </li>
                     <li>
                       <div className={classes.textIcon}>
-                        <i className="ion-ios-snow" />
-                        <Typography variant="h6" className={text.subtitle2}>Graphic Illustrations</Typography>
+                        <BiLogoGraphql size={25} />
+                        <Typography variant="h6" className={text.subtitle2}>GraphQl</Typography>
                       </div>
                       <LinearProgress
                         variant="determinate"
-                        value={play ? 80 : 0}
+                        value={play ? 70 : 0}
                         classes={{
                           root: classes.progressBg,
                           bar: classes.bar

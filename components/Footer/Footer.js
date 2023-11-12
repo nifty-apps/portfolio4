@@ -1,5 +1,7 @@
 import React from 'react';
 import Container from '@mui/material/Container';
+import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -9,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/maskulino-logo.svg';
+import logo from '~/public/images/own.jpg';
 import brand from '~/public/text/brand';
 import { useText } from '~/theme/common';
 import useStyles from './footer-style';
@@ -46,31 +48,40 @@ function Footer() {
                   </Typography>
                 </div>
                 <div className={classes.socmed}>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-facebook" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-instagram" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-twitter" />
-                  </IconButton>
-                  <IconButton aria-label="Delete" className={classes.margin} size="small">
-                    <i className="ion-logo-linkedin" />
-                  </IconButton>
+                  <Link href="https://www.facebook.com/bishal.arman.9/" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-facebook" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/bishalarman/" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <i className="ion-logo-linkedin" />
+                    </IconButton>
+                  </Link>
+                  <Link href="https://github.com/Bishal-Arman" target="_blank">
+                    <IconButton aria-label="Delete" className={classes.margin} size="small">
+                      <FaGithub size={23} />
+                    </IconButton>
+                  </Link>
                 </div>
-                <Button variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
+                <Button href="https://drive.google.com/file/d/1OdXDUB8racGL8mRcts3l6JuYRE8BCJ74/view?usp=drive_link" target="_blank" variant="outlined" color="primary" className={classes.download} component="a">Download CV</Button>
                 <div className={classes.contact}>
                   <Typography className={text.paragraph}>
+                    ~~~
                     {t('maskulino-landing.footer_contact')}
+                    ~~~
                     <br />
-                    +12 345 678 90
+                    +880 1784950443 or
+                    <br />
+                    +880 1964851899
                   </Typography>
                   <Divider className={classes.divider} />
                   <Typography className={text.paragraph}>
+                    ~~~
                     {t('maskulino-landing.footer_hello')}
+                    ~~~
                     <br />
-                    johndoe.skype
+                    Mohammadpur,Dhaka,Bangladesh-1207
                   </Typography>
                 </div>
               </div>
