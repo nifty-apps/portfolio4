@@ -79,6 +79,31 @@ function Timeline() {
                       </div>
                     </ScrollAnimation>
                   </li>
+                  <li>
+                    <ScrollAnimation
+                      animateOnce
+                      animateIn="fadeInLeftShort"
+                      delay={200}
+                      duration={0.3}
+                    >
+                      <div>
+                        <Typography
+                          variant="h3"
+                          gutterBottom
+                          className={text.subtitle2}
+                        >
+                          Contributor
+                        </Typography>
+                        <Typography gutterBottom>at Dev Sonket</Typography>
+                        <Typography className={classes.time}>
+                          Sep 2023 - Present
+                        </Typography>
+                        <Typography className={classes.time}>
+                          Part time hobby
+                        </Typography>
+                      </div>
+                    </ScrollAnimation>
+                  </li>
                 </ul>
               </div>
             </Grid>

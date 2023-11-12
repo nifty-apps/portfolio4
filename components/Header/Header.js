@@ -120,11 +120,11 @@ function Header(props) {
               </IconButton>
               <div className={classes.logo}>
                 {invert ? (
-                  <Link href={curLang + routeLink.maskulino.home}>
+                  <Link to={curLang + routeLink.maskulino.home}>
                     <img src={logo} alt="logo" />
                   </Link>
                 ) : (
-                  <AnchorLink href="#home">
+                  <AnchorLink to="#home">
                     <img src={logo} alt="logo" />
                   </AnchorLink>
                 )}
@@ -159,7 +159,7 @@ function Header(props) {
                           >
                             {invert ? (
                               // eslint-disable-next-line
-                              <Button href={"/" + item.url}>
+                              <Button to={"/" + item.url}>
                                 {t("maskulino-landing.header_" + item.name)}
                               </Button>
                             ) : (
@@ -168,7 +168,7 @@ function Header(props) {
                                 component={LinkBtn}
                                 onClick={handleCloseDrawer}
                                 offset={item.offset || 0}
-                                href={item.url}
+                                to={item.url}
                               >
                                 {t("maskulino-landing.header_" + item.name)}
                               </Button>
@@ -240,7 +240,7 @@ function Header(props) {
                       </a>
 
                       <a
-                        href="https://www.linkedin.com/in/alaminkhan03/"
+                        to="https://www.linkedin.com/in/alaminkhan03/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className=""

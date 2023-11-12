@@ -50,89 +50,26 @@ function Settings(props) {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
   const { invert } = props;
-
   return (
     <div className={classes.setting}>
-      <IconButton
-        aria-describedby={id}
-        aria-label="Settings"
-        onClick={handleClick}
-        className={cx(
-          classes.icon,
-          open && classes.active,
-          invert && classes.invert
-        )}
-        size="large"
-      >
-        <SettingsIcon fontSize="inherit" />
-      </IconButton>
-      <Popover
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        container={ctn}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-      >
-        <List
-          component="nav"
-          className={classes.modeMenu}
-          aria-label="Mode-menu"
-          subheader={
-            <ListSubheader component="div">
-              {t("maskulino-landing.header_theme")}
-            </ListSubheader>
-          }
-        >
-          <ListItem>
-            <Typography component="div">
-              <Grid component="label" container alignItems="center" spacing={1}>
-                <Grid item></Grid>
-                <Grid item>
-                  <Switch
-                    checked={isDark}
-                    onChange={handleChangeMode}
-                    value={isDark}
-                    inputProps={{ "aria-label": "checkbox" }}
-                  />
-                </Grid>
-                <Grid item>
-                  <DarkModeIcon />
-                </Grid>
-              </Grid>
-            </Typography>
-          </ListItem>
-        </List>
-        <Divider />
-        <List
-          component="nav"
-          className={classes.langMenu}
-          aria-label="Language-menu"
-          subheader={
-            <ListSubheader component="div">
-              {t("maskulino-landing.header_language")}
-            </ListSubheader>
-          }
-        >
-          {i18nextConfig.i18n.locales.map((locale) => (
-            <LanguageSwitch
-              ssg={i18nextConfig.ssg}
-              locale={locale}
-              key={locale}
-              checked={locale === currentLocale}
-              toggleDir={props.toggleDir}
-              closePopup={handleClose}
-            />
-          ))}
-        </List>
-      </Popover>
+      <ListItem>
+        <Typography component="div">
+          <Grid component="label" container alignItems="center" spacing={1}>
+            <Grid item></Grid>
+            <Grid item>
+              <Switch
+                checked={isDark}
+                onChange={handleChangeMode}
+                value={isDark}
+                inputProps={{ "aria-label": "checkbox" }}
+              />
+            </Grid>
+            <Grid item>
+              <DarkModeIcon />
+            </Grid>
+          </Grid>
+        </Typography>
+      </ListItem>
     </div>
   );
 }

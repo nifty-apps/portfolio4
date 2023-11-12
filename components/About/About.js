@@ -10,6 +10,9 @@ import { useTranslation } from "next-i18next";
 import brand from "~/public/text/brand";
 import { useText } from "~/theme/common";
 import useStyles from "./about-style";
+import BoltIcon from "@mui/icons-material/Bolt";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 function About() {
   const theme = useTheme();
@@ -25,39 +28,54 @@ function About() {
         <Grid container spacing={0}>
           <Grid item lg={2} xs={12} />
           <Grid item lg={9} xs={12}>
+            <div>
+              <Typography variant="h1" className={classes.title}>
+                This developer
+              </Typography>
+              <Typography className={classes.svg}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 200 50"
+                  width="280"
+                  height="50"
+                >
+                  <path
+                    d="M0 20
+           C 30 5, 70 35, 90 25
+           S 110 5, 160 15
+           S 220 40, 250 5"
+                    fill="none"
+                    stroke="gray"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </Typography>
+            </div>
             <div className={classes.about}>
               <div className={classes.reward}>
                 <div className={classes.item}>
                   <figure>
-                    <img src="/images/maskulino/reward1.svg" alt="badge" />
+                    <BoltIcon className="icon" />
                   </figure>
-                  <Typography component="p" className={text.paragraph}>
-                    Special Mention
-                  </Typography>
-                  <Typography variant="h1" className={text.subtitle}>
-                    Awards
+                  <Typography component="p" className={classes.paragraph}>
+                    Can adapt any technology quickly
                   </Typography>
                 </div>
                 <div className={classes.item}>
                   <figure>
-                    <img src="/images/maskulino/reward2.svg" alt="badge" />
+                    <PsychologyIcon className="icon" />
                   </figure>
-                  <Typography component="p" className={text.paragraph}>
-                    Became top 5% of the best
-                  </Typography>
-                  <Typography variant="h1" className={text.subtitle}>
-                    Web development Bootcamp
+                  <Typography component="p" className={classes.paragraph}>
+                    Can think & work under pressure
                   </Typography>
                 </div>
                 <div className={classes.item}>
                   <figure>
-                    <img src="/images/maskulino/reward3.svg" alt="badge" />
+                    <AutoStoriesIcon className="icon" />
                   </figure>
-                  <Typography component="p" className={text.paragraph}>
-                    Contributer on
-                  </Typography>
-                  <Typography variant="h1" className={text.subtitle}>
-                    Open Source
+                  <Typography component="p" className={classes.paragraph}>
+                    {" "}
+                    Reads lots of Docs & loves to apply them
                   </Typography>
                 </div>
               </div>

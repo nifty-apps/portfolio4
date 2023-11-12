@@ -19,6 +19,7 @@ import AnimationSlideshow from "./Hero/AnimationSlideshow";
 import Slideshow from "./Hero/Slideshow";
 import VideoHero from "./Hero/Video";
 import useStyles from "./banner-style";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function BannerNav(props) {
   const theme = useTheme();
