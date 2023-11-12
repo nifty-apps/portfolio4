@@ -75,11 +75,11 @@ function BannerNav(props) {
                   <span>{t("maskulino-landing.banner_greeting")}</span>
                 </Typography>
                 <Typography variant="h2" className={text.title}>
-                  <span>
-                    {t("maskulino-landing.banner_me")}
-                    &nbsp;Al Amin Khan,&nbsp;
-                    {brand.maskulino.title}
-                  </span>
+                 
+                   
+                    <span> {t("maskulino-landing.banner_me")}&nbsp;Al Amin Khan,&nbsp;</span><br/>
+                    <span className={text.titleV2}>{brand.maskulino.title}</span>
+                 
                 </Typography>
                 {!isMobile && (
                   <Fragment>

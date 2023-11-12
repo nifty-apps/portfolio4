@@ -12,7 +12,7 @@ const footerStyles = makeStyles({ uniqId: "footer" })((theme) => ({
       marginTop: theme.spacing(5),
     },
     "& img": {
-      filter: "grayscale(1) contrast(0.5) brightness(1.5)",
+      // filter: "grayscale(1) contrast(0.5) brightness(1.5)",
       width: 80,
       marginBottom: theme.spacing(2),
     },
@@ -47,6 +47,13 @@ const footerStyles = makeStyles({ uniqId: "footer" })((theme) => ({
   },
   download: {
     marginBottom: theme.spacing(4),
+    borderColor: theme.palette.text.secondary,
+    color: theme.palette.text.secondary,
+    "&:hover": {
+      backgroundColor: "#5f6163",
+      transition: "all 0.3s linear",
+      color: theme.palette.text.main,
+    },
   },
 }));
 

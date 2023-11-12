@@ -75,7 +75,9 @@ BlankPage.propTypes = {
 export default BlankPage;
 
 // Use this below for Server Side Render/Translation (SSR)
-// export const getStaticProps = async ({ locale }) => ({ props: { ...await serverSideTranslations(locale, ['common']) } });
+// export const getStaticProps = async ({ locale }) => ({
+//   props: { ...(await serverSideTranslations(locale, ["common"])) },
+// });
 
 // Use this below for Static Site Generation (SSG)
 const getStaticProps = makeStaticProps(["common"]);

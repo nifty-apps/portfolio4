@@ -1,6 +1,15 @@
+import { keyframes } from "tss-react";
 import { makeStyles } from "tss-react/mui";
 
 // TODO jss-to-tss-react codemod: usages of this hook outside of this file will not be converted.
+const textShine = keyframes`
+0% {
+    background-position: 0% 50%;
+  }
+  100%  {
+    background-position: 100% 50%;
+  }`
+
 export const useTextAlign = makeStyles({ uniqId: "textalign" })({
   textCenter: {
     textAlign: "center",
@@ -27,7 +36,7 @@ export const useFloat = makeStyles({ uniqId: "float" })({
 export const useText = makeStyles({ uniqId: "text" })((theme) => ({
   title: {
     fontWeight: theme.typography.fontWeightBold,
-    fontSize: 48,
+    fontSize: 58,
     lineHeight: "50px",
 
     [theme.breakpoints.down("lg")]: {
@@ -38,6 +47,48 @@ export const useText = makeStyles({ uniqId: "text" })((theme) => ({
       fontSize: 28,
       lineHeight: "44px",
     },
+    "& span": {
+      background: `linear-gradient(
+    to right,
+    #bf5af2 20%,
+    #FFD700 40%,
+    #5e5ce6 60%,
+   #FF00FF 80%
+  )`,
+  WebkitBackgroundClip: "text",
+  backgroundClip: "text",
+  WebkitTextFillColor: 'transparent',
+  backgroundSize: "500% auto",
+  animation: `${textShine} 20s ease-in-out infinite alternate`,
+    }
+  },
+  titleV2:{
+     fontWeight: theme.typography.fontWeightBold,
+    fontSize: 38,
+    lineHeight: "50px",
+
+    [theme.breakpoints.down("lg")]: {
+      fontSize: 38,
+      lineHeight: "40px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 28,
+      lineHeight: "44px",
+    },
+    "& span": {
+      background: `linear-gradient(
+    to right,
+    #bf5af2 20%,
+    #007aff 40%,
+    #5e5ce6 60%,
+    #6d20fd 80%
+  )`,
+  WebkitBackgroundClip: "text",
+  backgroundClip: "text",
+  WebkitTextFillColor: 'transparent',
+  backgroundSize: "500% auto",
+  animation: `${textShine} 10s ease-in-out infinite alternate`,
+    }
   },
   title2: {
     fontSize: 36,

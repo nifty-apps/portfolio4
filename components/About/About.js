@@ -36,7 +36,7 @@ function About() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 200 50"
-                  width="280"
+                  width="220"
                   height="50"
                 >
                   <path
