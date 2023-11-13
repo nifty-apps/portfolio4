@@ -8,7 +8,7 @@ const textShine = keyframes`
   }
   100%  {
     background-position: 100% 50%;
-  }`
+  }`;
 
 export const useTextAlign = makeStyles({ uniqId: "textalign" })({
   textCenter: {
@@ -50,20 +50,20 @@ export const useText = makeStyles({ uniqId: "text" })((theme) => ({
     "& span": {
       background: `linear-gradient(
     to right,
-    #bf5af2 20%,
-    #FFD700 40%,
-    #5e5ce6 60%,
-   #FF00FF 80%
+    #FBE7C6 20%,
+    #B4F8C8 40%,
+    #A0E7E5 60%,
+    #E9A200 80%
   )`,
-  WebkitBackgroundClip: "text",
-  backgroundClip: "text",
-  WebkitTextFillColor: 'transparent',
-  backgroundSize: "500% auto",
-  animation: `${textShine} 20s ease-in-out infinite alternate`,
-    }
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundSize: "500% auto",
+      animation: `${textShine} 20s ease-in-out infinite alternate`,
+    },
   },
-  titleV2:{
-     fontWeight: theme.typography.fontWeightBold,
+  titleV2: {
+    fontWeight: theme.typography.fontWeightBold,
     fontSize: 38,
     lineHeight: "50px",
 
@@ -83,12 +83,12 @@ export const useText = makeStyles({ uniqId: "text" })((theme) => ({
     #5e5ce6 60%,
     #6d20fd 80%
   )`,
-  WebkitBackgroundClip: "text",
-  backgroundClip: "text",
-  WebkitTextFillColor: 'transparent',
-  backgroundSize: "500% auto",
-  animation: `${textShine} 10s ease-in-out infinite alternate`,
-    }
+      WebkitBackgroundClip: "text",
+      backgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundSize: "500% auto",
+      animation: `${textShine} 10s ease-in-out infinite alternate`,
+    },
   },
   title2: {
     fontSize: 36,

@@ -17,7 +17,9 @@ const aboutStyles = makeStyles({ uniqId: "about" })((theme) => ({
     },
   },
   title: {
-    color: "#eeeeee",
+    color:
+      theme.palette.mode === "dark" ? "#eeeeee" : theme.palette.primary.dark,
+
     fontSize: 32,
     fontWeight: 600,
     display: "flex",
@@ -49,10 +51,12 @@ const aboutStyles = makeStyles({ uniqId: "about" })((theme) => ({
     },
   },
   paragraph: {
-    color: "#cccccc",
+    color:
+      theme.palette.mode === "dark" ? "#eeeeee" : theme.palette.primary.dark,
     fontSize: 18,
     fontWeight: 500,
     textAlign: "center",
+    lineHeight: "20px",
   },
 
   about: {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import WAVES from "vanta/dist/vanta.waves.min";
+import WAVES from "vanta/dist/vanta.globe.min";
 import useStyles from "./hero-style";
 
 function Animation() {
