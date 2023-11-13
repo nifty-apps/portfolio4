@@ -1,35 +1,42 @@
-import React, { useState } from 'react';
-import CountUp from 'react-countup';
-import ScrollAnimation from 'react-scroll-animation-wrapper';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import { useTranslation } from 'next-i18next';
-import { useText } from '~/theme/common';
-import useStyles from './counter-style';
+import React, { useState } from "react";
+import CountUp from "react-countup";
+import ScrollAnimation from "react-scroll-animation-wrapper";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import { useTranslation } from "next-i18next";
+import { useText } from "~/theme/common";
+import useStyles from "./counter-style";
+import github from "~public/images/logos/github.png";
 
 function Counter() {
   const { classes } = useStyles();
   const { classes: text } = useText();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const [play, setPlay] = useState(false);
 
   const countup = (val, isPlay) => (
-    <span>
-      {isPlay ? <CountUp end={val} /> : 0}
-    </span>
+    <span>{isPlay ? <CountUp end={val} /> : 0}</span>
   );
 
-  const handlePlay = visible => {
+  const handlePlay = (visible) => {
     if (visible.inViewport) {
-      setTimeout(() => { setPlay(true); }, 500);
+      setTimeout(() => {
+        setPlay(true);
+      }, 500);
     }
   };
 
   return (
     <div className={classes.counterWrap}>
       <Container maxWidth="md">
-        <Grid container justifyContent="center" alignItems="center" className={classes.root} spacing={6}>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          className={classes.root}
+          spacing={6}
+        >
           <Grid md={4} item>
             <ScrollAnimation
               animateOnce
@@ -41,11 +48,11 @@ function Counter() {
                 <div className={classes.text}>
                   <i className="ion-ios-briefcase-outline" />
                   <Typography variant="h4" className={text.title}>
-                    {countup(123, play)}
+                    {countup(23, play)} +
                   </Typography>
                 </div>
                 <Typography variant="h6" className={text.subtitle2}>
-                  {t('maskulino-landing.counter_completed')}
+                  {t("maskulino-landing.counter_completed")}
                 </Typography>
               </div>
             </ScrollAnimation>
@@ -53,26 +60,26 @@ function Counter() {
           <Grid md={4} item>
             <div className={classes.counterItem}>
               <div className={classes.text}>
-                <i className="ion-ios-time-outline" />
+                <i className="ion-ios-book-outline" />
                 <Typography variant="h4" className={text.title}>
-                  {countup(4567, play)}
+                  {countup(1, play)} Tec
                 </Typography>
               </div>
               <Typography variant="h6" className={text.subtitle2}>
-                {t('maskulino-landing.counter_hour')}
+                {t("maskulino-landing.counter_hour")}
               </Typography>
             </div>
           </Grid>
           <Grid md={4} item>
             <div className={classes.counterItem}>
               <div className={classes.text}>
-                <i className="ion-ios-heart-outline" />
+                <i className="ion-ios-mobile" />
                 <Typography variant="h4" className={text.title}>
-                  {countup(89, play)}
+                  {countup(24, play)}/7
                 </Typography>
               </div>
               <Typography variant="h6" className={text.subtitle2}>
-                {t('maskulino-landing.counter_happy')}
+                {t("maskulino-landing.counter_happy")}
               </Typography>
             </div>
           </Grid>

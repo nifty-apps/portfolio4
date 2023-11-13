@@ -1,41 +1,46 @@
-import React, { useRef, useEffect } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
-import Carousel from 'react-slick';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import { useTranslation } from 'next-i18next';
-import { useText } from '~/theme/common';
-import Title from '../Title';
-import IconTextCard from '../Cards/IconText';
-import useStyle from './services-style';
+import React, { useRef, useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import Carousel from "react-slick";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import { useTranslation } from "next-i18next";
+import { useText } from "~/theme/common";
+import Title from "../Title";
+import IconTextCard from "../Cards/IconText";
+import useStyle from "./services-style";
+import framework from "~/public/images/logos/framework.png";
+import staticweb from "~/public/images/logos/static.png";
+import next from "~/public/images/logos/next.png";
+import server from "~/public/images/logos/nodeJs.png";
+import api from "~/public/images/logos/api.png";
 
 const services = [
   {
-    icon: 'ion-ios-color-wand',
-    name: 'UI Interface Design',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: framework,
+    name: "Reactive Design",
+    desc: "I can provide reactive design for your website.",
   },
   {
-    icon: 'ion-logo-dribbble',
-    name: 'Icon Design',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: staticweb,
+    name: "Static Website",
+    desc: "Get your static (HTML, CSS, JS) website from me.",
   },
   {
-    icon: 'ion-ios-globe',
-    name: 'HTML Prototyping',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: next,
+    name: "Server rendered",
+    desc: "Get a full stack or server rendered website from me.",
   },
   {
-    icon: 'ion-ios-camera',
-    name: 'Photo Editing',
-    desc: 'Pellentesque ac  vel blandit nulla.'
+    icon: server,
+    name: "Full stack",
+    desc: "Get a full stack website with mongodb from me.",
   },
   {
-    icon: 'ion-ios-snow',
-    name: 'Graphic Illustrations',
-    desc: 'Pellentesque ac  vel blandit nulla.'
-  }
+    icon: api,
+    name: "API Integration",
+    desc: "Providing a through API integration with REST & GraphQL.",
+  },
 ];
 
 function Services() {
@@ -45,8 +50,8 @@ function Services() {
   const lastSlide = Math.floor(services.length - 3);
 
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
-  const { t } = useTranslation('common');
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+  const { t } = useTranslation("common");
 
   const slider = useRef(null);
   const settings = {
@@ -58,28 +63,32 @@ function Services() {
     arrows: false,
     variableWidth: true,
     pauseOnHover: true,
-    responsive: [{
-      breakpoint: 960,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }]
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-  if (theme.direction === 'rtl') {
+  if (theme.direction === "rtl") {
     slider.current.slickGoTo(lastSlide);
   }
 
@@ -87,12 +96,10 @@ function Services() {
     <div className={classes.root}>
       <div className={classes.floatingTitle}>
         <Title>
-          <strong>
-            {t('maskulino-landing.services_title')}
-          </strong>
+          <strong>{t("maskulino-landing.services_title")}</strong>
         </Title>
         <Typography className={text.paragraph}>
-          {t('maskulino-landing.services_desc')}
+          {t("maskulino-landing.services_desc")}
         </Typography>
       </div>
       <div className={classes.sliderWrap}>

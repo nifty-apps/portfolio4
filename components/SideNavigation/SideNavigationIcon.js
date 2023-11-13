@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Scrollspy from 'react-scrollspy';
-import { useTranslation } from 'next-i18next';
-import logo from '~/public/images/maskulino-logo.svg';
-import useStyles from './sidenav-icon-style';
-import navMenu from './menu';
+import React, { useState } from "react";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import Scrollspy from "react-scrollspy";
+import { useTranslation } from "next-i18next";
+import logo from "~/public/images/aalogo.png";
+import useStyles from "./sidenav-icon-style";
+import navMenu from "./menu";
 
 let counter = 0;
 function createData(name, url, icon, offset) {
@@ -18,24 +18,25 @@ function createData(name, url, icon, offset) {
     name,
     url,
     icon,
-    offset
+    offset,
   };
 }
 
-const LinkBtn = React.forwardRef(function LinkBtn(props, ref) { // eslint-disable-line
+const LinkBtn = React.forwardRef(function LinkBtn(props, ref) {
+  // eslint-disable-line
   return <AnchorLink to={props.to} {...props} />; // eslint-disable-line
 });
 
 function SideNavigation() {
   const { classes } = useStyles();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const [menuList] = useState([
-    createData(navMenu[0], '#' + navMenu[0], 'ion-ios-contact-outline', 160),
-    createData(navMenu[1], '#' + navMenu[1], 'ion-ios-add-circle-outline'),
-    createData(navMenu[2], '#' + navMenu[2], 'ion-ios-keypad-outline'),
-    createData(navMenu[3], '#' + navMenu[3], 'ion-ios-chatboxes-outline', -40),
-    createData(navMenu[4], '#' + navMenu[4], 'ion-ios-copy-outline'),
-    createData(navMenu[5], '#' + navMenu[5], 'ion-ios-mail-outline'),
+    createData(navMenu[0], "#" + navMenu[0], "ion-ios-contact-outline", 160),
+    createData(navMenu[1], "#" + navMenu[1], "ion-ios-add-circle-outline"),
+    createData(navMenu[2], "#" + navMenu[2], "ion-ios-keypad-outline"),
+    createData(navMenu[3], "#" + navMenu[3], "ion-ios-chatboxes-outline", -40),
+    createData(navMenu[4], "#" + navMenu[4], "ion-ios-mail-outline"),
+    createData(navMenu[5], "#" + navMenu[5], "ion-ios-copy-outline"),
   ]);
   return (
     <div className={classes.navigation}>
@@ -44,17 +45,14 @@ function SideNavigation() {
           <img src={logo} alt="logo" />
         </AnchorLink>
         <List component="nav" className={classes.menu}>
-          <Scrollspy
-            items={navMenu}
-            currentClassName="active"
-          >
-            {menuList.map(item => (
+          <Scrollspy items={navMenu} currentClassName="active">
+            {menuList.map((item) => (
               <ListItem
                 key={item.id.toString()}
                 button
                 component={LinkBtn}
                 offset={item.offset || 0}
-                href={item.url}
+                href={item.name === undefined ? "" : item.url}
                 classes={{ root: classes.link }}
               >
                 <ListItemIcon className={classes.icon}>
@@ -62,7 +60,11 @@ function SideNavigation() {
                 </ListItemIcon>
                 <ListItemText
                   classes={{ root: classes.text }}
-                  primary={t('maskulino-landing.header_' + item.name)}
+                  primary={
+                    item.name === undefined
+                      ? "Not Available Yet"
+                      : t("maskulino-landing.header_" + item.name)
+                  }
                 />
               </ListItem>
             ))}
